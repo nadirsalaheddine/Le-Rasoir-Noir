@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<title>Luxury Business Template</title>
+
+<!-- Fonts: swap these three families in config/business.config.js -> theme.fonts to re-skin -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#top" class="logo"><span id="logo-text">--</span></a>
+  <span id="business-name-hidden" class="visually-hidden"></span>
+  <nav class="nav-links" id="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#staff">Team</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Book</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow hero-eyebrow" id="hero-eyebrow"></span>
+      <h1 id="hero-headline"></h1>
+      <p class="hero-sub" id="hero-sub"></p>
+      <div class="cta-row">
+        <a class="btn btn-solid" id="hero-cta-primary" href="#booking"></a>
+        <a class="btn btn-outline" id="hero-cta-secondary" href="#services"></a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img id="hero-image" src="" alt="" />
+      <div class="blade-mask" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="blade-stripe" role="presentation"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img id="about-image" src="" alt="" />
+      </div>
+      <div class="about-body">
+        <span class="eyebrow" id="about-eyebrow"></span>
+        <h2 id="about-heading"></h2>
+        <p id="about-body" style="margin-top: var(--space-3);"></p>
+        <blockquote class="pull-quote">
+          <span id="about-quote-text"></span>
+          <cite id="about-quote-attr"></cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow" id="services-eyebrow"></span>
+        <h2 id="services-heading"></h2>
+      </div>
+      <div id="services-list"></div>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section id="staff">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow" id="staff-eyebrow"></span>
+        <h2 id="staff-heading"></h2>
+      </div>
+      <div class="staff-scroller" id="staff-scroller"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow" id="gallery-eyebrow"></span>
+        <h2 id="gallery-heading"></h2>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow" id="testimonials-eyebrow"></span>
+        <h2 id="testimonials-heading"></h2>
+      </div>
+      <div class="testimonial-stage" id="testimonial-stage"></div>
+      <div class="testimonial-dots" id="testimonial-dots"></div>
+    </div>
+  </section>
+
+  <!-- LOCATION + BOOKING -->
+  <section id="booking">
+    <div class="container location-grid">
+      <div>
+        <span class="eyebrow" id="location-eyebrow"></span>
+        <h2 id="location-heading"></h2>
+        <p class="contact-line" id="location-address"></p>
+        <p class="contact-line"><a id="location-phone" href="#"></a></p>
+        <p class="contact-line"><a id="location-email" href="#"></a></p>
+        <div class="hours-list" id="hours-list"></div>
+        <div id="map-embed" style="margin-top: var(--space-3);"></div>
+        <p class="map-fallback-note" id="map-fallback-note"></p>
+      </div>
+
+      <div>
+        <span class="eyebrow" id="booking-eyebrow"></span>
+        <h2 id="booking-heading"></h2>
+        <p class="hero-sub" id="booking-subheading"></p>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" required />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-service">Service</label>
+              <select id="f-service" name="service" required></select>
+            </div>
+            <div class="field">
+              <label for="f-date">Preferred date</label>
+              <input id="f-date" name="date" type="date" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-notes">Notes (optional)</label>
+            <textarea id="f-notes" name="notes" rows="3"></textarea>
+          </div>
+          <button class="btn btn-solid" type="submit" style="justify-self: start; margin-top: var(--space-1);">
+            Confirm Booking
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="blade-stripe" role="presentation"></div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p class="footer-note" id="footer-note"></p>
+    <div class="footer-socials" id="footer-socials"></div>
+  </div>
+  <div class="container" style="margin-top: var(--space-2);">
+    <p class="footer-note" id="footer-copyright" style="font-size: 0.75rem;"></p>
+  </div>
+</footer>
+
+<!-- CONFIG: the only file to edit for a full brand/business swap -->
+<script src="../config/business.config.js"></script>
+
+<!-- GSAP (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- App layers -->
+<script src="js/render.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>

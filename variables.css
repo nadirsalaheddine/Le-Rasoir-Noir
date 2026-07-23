@@ -1,0 +1,48 @@
+/* ============================================================================
+   DESIGN TOKENS
+   These mirror config/business.config.js -> theme. CSS can't import JS, so
+   render.js also writes these same values onto :root as inline custom
+   properties at runtime — if you edit business.config.js, the live page
+   repaints correctly without touching this file. Treat this file as the
+   pre-JS fallback / print-time default.
+   ============================================================================ */
+
+:root {
+  --color-bg: #14110F;
+  --color-surface: #1D1A17;
+  --color-surface-raised: #242019;
+  --color-text: #EDE6D6;
+  --color-text-muted: #A79E8E;
+  --color-accent: #B08D57;
+  --color-accent-deep: #8C3B2E;
+  --color-divider: #3A362F;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Archivo', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius: 2px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 7rem;
+  --space-7: 10rem;
+
+  --container-max: 1240px;
+  --edge-padding: clamp(1.25rem, 5vw, 4rem);
+
+  --ease-blade: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.3s;
+  --dur-med: 0.6s;
+  --dur-slow: 1.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01s;
+    --dur-med: 0.01s;
+    --dur-slow: 0.01s;
+  }
+}
